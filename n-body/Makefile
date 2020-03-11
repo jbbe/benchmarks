@@ -1,8 +1,6 @@
 
 build-ml:
-	mv nbody.ocaml nbody.ml
 	ocamlopt -noassert -unsafe -fPIC -nodynlink -inline 100 -O3  -ccopt -march=core2 nbody.ml -o nbody.ocaml_run
-	rm binarytrees.ocaml-2.ml
 
 run-ml:
 	./nbody.ocaml_run 50000000
